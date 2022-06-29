@@ -1,0 +1,2 @@
+[workspace]
+members = ["hpmq-sdk", "hpmq-sdk-macro"]

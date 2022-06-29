@@ -1,0 +1,18 @@
+[package]
+name = "hpmq-sdk"
+version = "0.3.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde_json = "1.0"
+anyhow = "1.0"
+wapc-guest = { version = "0.4", optional = true }
+hpmq-sdk-macro = { path = "../hpmq-sdk-macro", optional = true }
+ntex-bytes = "0.1"
+serde = { version = "1.0", features = ["derive"]}
+
+[features]
+default = ["sdk"]
+sdk = ["hpmq-sdk-macro", "wapc-guest"]
